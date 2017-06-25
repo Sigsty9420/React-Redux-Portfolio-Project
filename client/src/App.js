@@ -6,15 +6,18 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-title">City Teleporter</div>
+        <div className="App-title"><h2>City Teleporter</h2></div>
         <div>
           <input placeholder="Search for a city..."/>
           <button>Submit</button>
         </div>
         <div className="City-details">
-          <div>City Name</div>
-          <div>Country</div>
-          <div>City population</div>
+        
+          <div><h3>General</h3>
+            <p>City name:</p>
+            <p>Country:</p>
+            <p>City population:</p>
+          </div>
 
           <div><h3>City Size</h3>
             <p>City population:</p>
