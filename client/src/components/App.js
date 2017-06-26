@@ -1,41 +1,26 @@
 import React, { Component } from 'react';
 import './App.css';
+import SearchForm from "./SearchForm";
 import Autosuggest from 'react-autosuggest';
 import {FormGroup, FormControl, InputGroup, Glyphicon } from 'react-bootstrap';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      query: ''
-    }
+
+
+  componentDidMount() {
+    fetch('/cities')
+      .then(response => response.json())
+      .then(cities => console.log(cities))
+      .catch(error => console.log(error))
   }
 
-  search() {
-    console.log('this.state', this.state);
-  }
+
   render() {
     return (
       <div className="App">
         <div className="App-title"><h1>City Teleporter</h1></div>
-         <FormGroup>
-           <InputGroup>
-              <FormControl
-              type="text"
-              placeholder="Search for a city"
-              value={this.state.query}
-              onChange={event => {this.setState({query: event.target.value})}}
-              onKeyPress={event => {
-                if (event.key === 'Enter') {
-                  this.search()
-                }
-              }}
-              />
-              <InputGroup.Addon onClick={() => this.search()}>
-                <Glyphicon glyph="search"></Glyphicon>
-              </InputGroup.Addon>
-            </InputGroup>
-          </FormGroup>
+        <SearchForm />
+
 
         <div className="City-details col-md-6">
 
