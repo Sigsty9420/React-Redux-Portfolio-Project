@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Autosuggest from 'react-autosuggest';
 import {FormGroup, FormControl, InputGroup, Glyphicon } from 'react-bootstrap';
