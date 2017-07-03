@@ -14,6 +14,7 @@ ActiveRecord::Schema.define(version: 20170626091208) do
 
   create_table "cities", force: :cascade do |t|
     t.string "name"
+    t.string "url"
     t.string "country"
     t.float "population"
     t.float "population_density"
