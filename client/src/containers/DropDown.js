@@ -15,6 +15,7 @@ export default class DropDown extends Component {
 
   handleSelect(selection) {
     this.setState({ selectedCity: selection.label  })
+    console.log(selection)
   }
 
 

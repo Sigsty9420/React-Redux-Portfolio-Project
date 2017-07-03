@@ -13,7 +13,7 @@ gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 
-
+gem 'hashie'
 gem 'httparty'
 
 gem 'foreman', '~> 0.82.0'
