@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Select from 'react-select';
+import 'react-select/dist/react-select.css';
 
 
 export default class DropDown extends Component {
@@ -33,6 +34,7 @@ export default class DropDown extends Component {
         onChange={this.handleSelect}
         autofocus
         placeholder="Select a city..."
+        className="container col-md-4 col-md-offset-4"
       />
 
     )
