@@ -28,10 +28,6 @@ class App extends Component {
             <p>City name:</p>
             <p>Country:</p>
             <p>City population:</p>
-          </div>
-
-          <div><h3>City Size</h3>
-            <p>City population:</p>
             <p>Population density in people/sq km in city center:</p>
           </div>
 
