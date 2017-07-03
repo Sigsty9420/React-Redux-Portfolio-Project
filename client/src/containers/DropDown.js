@@ -4,27 +4,35 @@ import Select from 'react-select';
 
 export default class DropDown extends Component {
 
+  constructor(props){
+    super(props);
+
+    this.state = { selectedCity: ''}
+
+    this.handleSelect = this.handleSelect.bind(this);
+  }
+
+  handleSelect(selection) {
+    this.setState({ selectedCity: selection.label  })
+  }
+
 
 
   render(){
 
-    var Select = require('react-select');
-
-      var options = [
-        { value: 'one', label: 'One' },
-        { value: 'two', label: 'Two' }
-      ];
-
-      function logChange(val) {
-        console.log("Selected: " + JSON.stringify(val));
-      }
+    const options = [
+      { value: 'austin', label: 'Austin' },
+      { value: 'cape-town', label: 'Cape Town' }
+    ]
 
     return (
       <Select
         name="form-field-name"
-        value="one"
+        value="What does this do?"
         options={options}
-        onChange={logChange}
+        onChange={this.handleSelect}
+        autofocus
+        placeholder="Select a city..."
       />
 
     )
