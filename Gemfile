@@ -15,6 +15,7 @@ gem 'puma', '~> 3.7'
 
 gem 'hashie'
 gem 'httparty'
+gem 'rack-cors'
 
 gem 'foreman', '~> 0.82.0'
 

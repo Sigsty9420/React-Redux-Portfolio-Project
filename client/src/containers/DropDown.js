@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
+import { connect } from 'react-redux';
+import { bindActionCreators} from 'redux';
+import { fetchCities } from '../actions/fetchCities'
 
 
-export default class DropDown extends Component {
+class DropDown extends Component {
 
   constructor(props){
     super(props);
-
-    this.state = { selectedCity: ''}
+    this.state = { selectedCity: '',}
 
     this.handleSelect = this.handleSelect.bind(this);
   }
@@ -18,7 +20,9 @@ export default class DropDown extends Component {
     console.log(selection)
   }
 
-
+  componentWillMount() {
+    this.props.fetchCities();
+  }
 
   render(){
 
@@ -41,3 +45,9 @@ export default class DropDown extends Component {
     )
   }
 }
+
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ fetchCities }, dispatch)
+}
+
+export default connect(null, mapDispatchToProps)(DropDown);
