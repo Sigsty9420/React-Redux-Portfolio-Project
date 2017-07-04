@@ -161,6 +161,8 @@ class CreateCities < ActiveRecord::Migration[5.1]
       t.float :funding_accelerators_detail
       t.float :seaside_access
       t.float :lgbt_detail_opinion_percent_in_favor
+      t.float :seaside_waterbody
+      t.float :weather_av_percent_chance_clear_skies
       t.integer :employer_social_taxes_cap_other
       t.timestamps
     end

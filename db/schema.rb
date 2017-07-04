@@ -173,6 +173,9 @@ ActiveRecord::Schema.define(version: 20170626091208) do
     t.float "funding_accelerators_detail"
     t.float "seaside_access"
     t.float "lgbt_detail_opinion_percent_in_favor"
+    t.float "seaside_waterbody"
+    t.float "weather_av_percent_chance_clear_skies"
+    t.integer "employer_social_taxes_cap_other"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

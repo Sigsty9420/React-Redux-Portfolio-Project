@@ -40,7 +40,5 @@ class City < ApplicationRecord
     end
     city.update_attributes(city_attributes)
   end
-  private
 
-  def city_params
 end
