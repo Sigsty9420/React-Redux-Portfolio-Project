@@ -52,7 +52,7 @@ class CreateCities < ActiveRecord::Migration[5.1]
       t.integer :culture_sports_venue_count
       t.float :zoos_teleport_score
       t.integer :culture_zoos_venue_count
-      t.string :currency_urban_area USD
+      t.string :currency_urban_area
       t.float :currency_exchange_rate_per_us_dollar_for_urban_area
       t.float :gdp_growth_rate
       t.float :gdp_growth_rate_teleport_score
@@ -117,6 +117,7 @@ class CreateCities < ActiveRecord::Migration[5.1]
       t.float :internet_access_upload_teleport_score
       t.float :urban_area_elevation_meters
       t.float :presence_of_hills_in_city
+      t.float :presence_of_mountains_in_city
       t.float :median_peak_in_meters
       t.float :elevation_hills_or_mountains_teleport_score
       t.float :water_access_teleport_score
@@ -157,6 +158,10 @@ class CreateCities < ActiveRecord::Migration[5.1]
       t.float :venture_capital_teleport_score
       t.string :funding_accelerator_names
       t.float :funding_accelerators
+      t.float :funding_accelerators_detail
+      t.float :seaside_access
+      t.float :lgbt_detail_opinion_percent_in_favor
+      t.integer :employer_social_taxes_cap_other
       t.timestamps
     end
   end
