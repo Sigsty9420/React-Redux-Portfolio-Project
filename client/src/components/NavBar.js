@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const NavBar = props => {
   return (
-    <nav className="navbar navbar-default">
+    <nav className="navbar navbar-default col-md-offset-4 col-md-4">
       <NavLink to="/" className="navbar-brand">Home</NavLink>
       <NavLink to="/about" className="navbar-brand">About</NavLink>
     </nav>

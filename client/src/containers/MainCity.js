@@ -12,10 +12,20 @@ import InternetAccess from '../components/details/internet_access'
 import Outdoors from '../components/details/outdoors'
 import Pollution from '../components/details/pollution'
 import Safety from '../components/details/safety'
+import { bindActionCreators} from 'redux';
+import { fetchDetails } from '../actions/fetchDetails'
 
 
 class MainCity extends Component {
+  setParams () {
+
+  }
+
   render(){
+    if (!this.props.city.name) {
+      this.props.fetchDetails(this.props.match.params.id)
+    }
+
     return (
       <div className="row">
         <h2 className="text-center">{this.props.city.name}</h2>
@@ -128,9 +138,13 @@ class MainCity extends Component {
   }
 }
 
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({ fetchDetails }, dispatch)
+}
+
 function mapStateToProps(state){
   return {city: state.selectedCity.city}
 }
 
 
-export default connect(mapStateToProps)(MainCity);
+export default connect(mapStateToProps, mapDispatchToProps)(MainCity);

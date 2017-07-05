@@ -26,7 +26,6 @@ class DropDown extends Component {
   handleSelect(selection) {
     this.props.fetchDetails(selection.value)
     this.setState({redirect: true, selectedCity: selection.value});
-    console.log(this.props.match.params)
     this.props.history.push(`/cities/${selection.value}`);
   }
 

@@ -24,12 +24,12 @@
   to { transform: rotate(360deg); }
 }
 
-.navbar .navbar-nav {
+.navbar {
   display: inline-block;
   float: none;
   vertical-align: top;
 }
 
-.navbar .navbar-collapse {
+.navbar {
   text-align: center;
 }
