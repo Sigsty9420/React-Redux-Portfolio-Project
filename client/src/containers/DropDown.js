@@ -41,7 +41,7 @@ class DropDown extends Component {
       <div>
         <Select
           name="form-field-name"
-          value="What does this do?"
+          value={"What does this do?"}
           options={options}
           onChange={this.handleSelect}
           autofocus={true}
