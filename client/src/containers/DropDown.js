@@ -4,6 +4,7 @@ import 'react-select/dist/react-select.css';
 import { connect } from 'react-redux';
 import { bindActionCreators} from 'redux';
 import { fetchCities } from '../actions/fetchCities'
+import { fetchDetails } from '../actions/fetchDetails'
 
 
 class DropDown extends Component {
@@ -21,16 +22,14 @@ class DropDown extends Component {
   }
 
   handleSelect(selection) {
-    this.setState({ selectedCity: selection.label  })
     console.log(selection)
+    this.props.fetchDetails(selection.value)
   }
 
   makeList() {
     let list = []
     this.props.cities.cities.map((city) => {
-      let name = city.name
-      debugger;
-      return list.push({value: name, label: name})
+      return list.push({value: city.id, label: city.name})
     })
     return list
   }
@@ -57,7 +56,7 @@ class DropDown extends Component {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ fetchCities }, dispatch)
+  return bindActionCreators({ fetchCities, fetchDetails }, dispatch)
 }
 
 function mapStateToProps(cities){
