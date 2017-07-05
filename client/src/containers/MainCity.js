@@ -7,8 +7,12 @@ class MainCity extends Component {
     return (
       <div className="row">
         <h2 className="text-center">{this.props.city.name}</h2>
-        <div className="col-md-offset-4">
-        <General name={this.props.city.name} population={this.props.city.urban_area_population_millions} />
+        <div className="col-md-offset-4 col-md-4">
+        <General name={this.props.city.name}
+        population={this.props.city.urban_area_population_millions}
+        populationDensity={this.props.city.population_density_in_people_sq_km_in_ua_center} 
+
+        />
         </div>
       </div>
     );
