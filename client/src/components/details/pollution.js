@@ -8,5 +8,6 @@ export default (props) => {
       <p>Cleanliness Teleport score - {props.cleanlinessScore}</p>
       <p>Drinking water quality Teleport score - {props.drinkingWaterScore}</p>
       <p>Urban greenery Teleport score - {props.urbanGreeneryScore}</p>
+    </div>
   );
 }

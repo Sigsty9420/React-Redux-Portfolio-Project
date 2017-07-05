@@ -5,14 +5,14 @@ export default (props) => {
     <div>
       <h3 className="text-center">Business</h3>
 
-      <h4>Busines Freedom</h4>
+      <h4><u>Busines Freedom</u></h4>
 
       <p>Business freedom Teleport score - {props.freedomScore}</p>
       <p>Freedom from corruption Teleport score - {props.corruptionScore}</p>
       <p>Lack of labor restrictions Teleport score - {props.laborRestrictionsScore}</p>
       <p>Time to open a business Teleport score - {props.openBusinessScore}</p>
 
-      <h4>Startups</h4>
+      <h4><u>Startups</u></h4>
 
       <p>Coworking spaces Teleport score - {props.coworkScore}</p>
       <p>Coworking spaces on WorkFrom.co - {props.coworkCount}</p>
@@ -25,13 +25,13 @@ export default (props) => {
       <p>Venture capital Teleport score - {props.vcScore}</p>
       <p>Number of funding accelerators - {props.acceleratorCount}</p>
 
-      <h4>Taxation</h4>
+      <h4><u>Taxation</u></h4>
 
       <p>Corporate tax (% of profit) - {props.corporateTax}</p>
       <p>Income tax level Teleport score - {props.incomeTaxScore}</p>
       <p>VAT (sales tax) - {props.vat}</p>
 
-      <h4>Job Market</h4>
+      <h4><u>Job Market</u></h4>
 
       <p>Unemployment rate - {props.unemployment}</p>
       <p>Startup job availability Teleport score - {props.startupJobScore}</p>

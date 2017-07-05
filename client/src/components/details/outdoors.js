@@ -9,5 +9,6 @@ export default (props) => {
       <p>Presence of mountains in city - {props.mountainsPresence}</p>
       <p>Water access Teleport score - {props.waterAccessScore}</p>
       <p>Seaside access:</p>
+    </div>
   );
 }
