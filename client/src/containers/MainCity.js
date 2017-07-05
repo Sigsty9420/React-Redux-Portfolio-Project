@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import General from '../components/general'
 
 class MainCity extends Component {
   render(){
     return (
       <div className="row">
         <h2 className="text-center">{this.props.city.name}</h2>
+        <General name={this.props.city.name} population={this.props.city.urban_area_population_millions} />
       </div>
     );
   }
