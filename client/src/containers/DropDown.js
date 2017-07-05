@@ -15,21 +15,29 @@ class DropDown extends Component {
     this.handleSelect = this.handleSelect.bind(this);
   }
 
+  componentWillMount() {
+    this.props.fetchCities();
+    this.makeList();
+  }
+
   handleSelect(selection) {
     this.setState({ selectedCity: selection.label  })
     console.log(selection)
   }
 
-  componentWillMount() {
-    this.props.fetchCities();
+  makeList() {
+    let list = []
+    this.props.cities.cities.map((city) => {
+      let name = city.name
+      debugger;
+      return list.push({value: name, label: name})
+    })
+    return list
   }
 
   render(){
 
-    const options = [
-      { value: 'austin', label: 'Austin' },
-      { value: 'cape-town', label: 'Cape Town' }
-    ]
+    const options = this.makeList();
 
     return (
       <Select
@@ -37,7 +45,9 @@ class DropDown extends Component {
         value="What does this do?"
         options={options}
         onChange={this.handleSelect}
-        autofocus
+        autofocus={true}
+        autoBlur={true}
+        isLoading={this.props.cities.loading}
         placeholder="Select a city..."
         className="container col-md-4 col-md-offset-4"
       />
@@ -50,4 +60,8 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators({ fetchCities }, dispatch)
 }
 
-export default connect(null, mapDispatchToProps)(DropDown);
+function mapStateToProps(cities){
+  return {cities: cities.cities }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(DropDown);
