@@ -129,7 +129,7 @@ class MainCity extends Component {
 }
 
 function mapStateToProps(state){
-  return {city: state.selectedCity.city }
+  return {city: state.selectedCity.city}
 }
 
 

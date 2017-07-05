@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import Select from 'react-select';
 import 'react-select/dist/react-select.css';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
 import { bindActionCreators} from 'redux';
 import { fetchCities } from '../actions/fetchCities'
 import { fetchDetails } from '../actions/fetchDetails'
-import { Redirect } from 'react-router';
+
 
 
 class DropDown extends Component {
@@ -25,6 +26,8 @@ class DropDown extends Component {
   handleSelect(selection) {
     this.props.fetchDetails(selection.value)
     this.setState({redirect: true, selectedCity: selection.value});
+    console.log(this.props)
+    this.props.history.push(`cities/${selection.value}`);
   }
 
   makeList() {
@@ -36,10 +39,6 @@ class DropDown extends Component {
   }
 
   render(){
-
-    if (this.state.redirect) {
-      return <Redirect to={"/cities/" + this.state.selectedCity} />;
-    }
 
     const options = this.makeList();
 
@@ -71,4 +70,4 @@ function mapStateToProps(cities){
   return {cities: cities.cities }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(DropDown);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(DropDown));

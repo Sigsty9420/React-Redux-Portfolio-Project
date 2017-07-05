@@ -6,22 +6,20 @@ import thunk from 'redux-thunk';
 import rootReducer from './reducers';
 import App from './components/App';
 import './index.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, HashRouter } from 'react-router-dom';
 import MainCity from './containers/MainCity'
-import { createBrowserHistory } from 'history';
+//import { createBrowserHistory } from 'history';
 
 const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(), applyMiddleware(thunk));
 
-const history = createBrowserHistory();
+//const history = createBrowserHistory();
 
 ReactDOM.render(
   <Provider store={store} >
-    <Router history={history}>
+    <Router history={HashRouter}>
       <div>
-        <App >
-          <Route path="/" />
-          <Route path="/cities/:id" render={MainCity} />
-        </App>  
+          <Route exact component={App} />
+          <Route path="/cities/:cityId" component={MainCity} />
       </div>
     </Router>
   </Provider>, document.getElementById('root')
