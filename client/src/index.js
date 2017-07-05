@@ -8,6 +8,7 @@ import App from './components/App';
 import './index.css';
 import { BrowserRouter as Router, Route, HashRouter } from 'react-router-dom';
 import MainCity from './containers/MainCity'
+import About from './components/About'
 //import { createBrowserHistory } from 'history';
 
 const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(), applyMiddleware(thunk));
@@ -20,6 +21,7 @@ ReactDOM.render(
       <div>
           <Route exact component={App} />
           <Route path="/cities/:cityId" component={MainCity} />
+          <Route path="/about" component={About} />
       </div>
     </Router>
   </Provider>, document.getElementById('root')
