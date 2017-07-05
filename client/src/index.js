@@ -18,9 +18,10 @@ ReactDOM.render(
   <Provider store={store} >
     <Router history={history}>
       <div>
-        <App />
-        <Route path="/" />
-        <Route path="/cities/:id" render={MainCity} />
+        <App >
+          <Route path="/" />
+          <Route path="/cities/:id" render={MainCity} />
+        </App>  
       </div>
     </Router>
   </Provider>, document.getElementById('root')
