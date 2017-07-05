@@ -8,7 +8,7 @@ export default (props) => {
       <p>Art galleries - {props.artGalleries}</p>
       <p>Cinemas - {props.cinemas}</p>
       <p>Comedy clubs - {props.comedyClubs}</p>
-      <p>Concert venues - {props.concerVenues}</p>
+      <p>Concert venues - {props.concertVenues}</p>
       <p>Historical sites - {props.historicalSites}</p>
       <p>Museums - {props.museums}</p>
       <p>Performing art venues - {props.performingArtVenues}</p>
