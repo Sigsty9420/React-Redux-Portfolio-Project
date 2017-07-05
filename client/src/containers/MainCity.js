@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-export default class MainCity extends Component {
+class MainCity extends Component {
   render(){
     return (
       <div className="row">
-        <h2 className="text-center">City Name</h2>
+        <h2 className="text-center">{this.props.city.name}</h2>
       </div>
     );
   }
 }
+
+function mapStateToProps(state){
+  return {city: state.selectedCity.city }
+}
+
+
+export default connect(mapStateToProps)(MainCity);

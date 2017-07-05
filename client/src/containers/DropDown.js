@@ -38,17 +38,20 @@ class DropDown extends Component {
     const options = this.makeList();
 
     return (
-      <Select
-        name="form-field-name"
-        value="What does this do?"
-        options={options}
-        onChange={this.handleSelect}
-        autofocus={true}
-        autoBlur={true}
-        isLoading={this.props.cities.loading}
-        placeholder="Select a city..."
-        className="container col-md-4 col-md-offset-4"
-      />
+      <div>
+        <Select
+          name="form-field-name"
+          value="What does this do?"
+          options={options}
+          onChange={this.handleSelect}
+          autofocus={true}
+          autoBlur={true}
+          isLoading={this.props.cities.loading}
+          placeholder="Select a city..."
+          className="container col-md-4 col-md-offset-4"
+        />
+        <div className="row" />
+      </div>
 
     )
   }
