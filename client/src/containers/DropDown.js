@@ -22,7 +22,6 @@ class DropDown extends Component {
   }
 
   handleSelect(selection) {
-    console.log(selection)
     this.props.fetchDetails(selection.value)
   }
 
