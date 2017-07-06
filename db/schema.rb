@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170706182926) do
+ActiveRecord::Schema.define(version: 20170706202513) do
 
   create_table "cities", force: :cascade do |t|
     t.string "name"
@@ -176,6 +176,13 @@ ActiveRecord::Schema.define(version: 20170706182926) do
     t.float "seaside_waterbody"
     t.float "weather_av_percent_chance_clear_skies"
     t.integer "employer_social_taxes_cap_other"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "favourite_cities", force: :cascade do |t|
+    t.string "name"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

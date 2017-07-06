@@ -24,7 +24,6 @@ class FavouriteCity extends Component {
   }
 
   render() {
-    console.log(this.props)
     const { userCities } = this.props;
       return (
         <div className="col-md-offset-4 col-md-4">
@@ -35,7 +34,6 @@ class FavouriteCity extends Component {
               className="form-control"
               onChange={this.onInputChange}
               />
-
             <br />
             <br />
               <button type="submit" className="btn btn-secondary">Submit</button>

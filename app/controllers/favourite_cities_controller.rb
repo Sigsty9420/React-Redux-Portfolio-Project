@@ -1,0 +1,2 @@
+class FavouriteCitiesController < ApplicationController
+end
