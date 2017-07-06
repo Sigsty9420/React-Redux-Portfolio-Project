@@ -8,19 +8,19 @@ import CityDropDown from '../containers/CityDropDown';
 class FavouriteCity extends Component {
   constructor(props, context) {
     super(props, context);
-    this.state = {email: ''};
+    this.state = {username: ''};
 
     this.onInputChange = this.onInputChange.bind(this);
     this.onFormSubmit = this.onFormSubmit.bind(this);
   }
 
   onInputChange(event){
-    this.setState({email: event.target.value})
+    this.setState({username: event.target.value})
   }
 
   onFormSubmit(event) {
     event.preventDefault();
-    this.props.getUserCity(this.state.email);
+    this.props.getUserCity(this.state.username);
   }
 
   render() {
@@ -30,7 +30,7 @@ class FavouriteCity extends Component {
           <br />
           <form className="input-group" onSubmit={this.onFormSubmit}>
             <input
-              placeholder="Please enter your email address"
+              placeholder="Please enter your username"
               className="form-control"
               onChange={this.onInputChange}
               />
@@ -38,11 +38,12 @@ class FavouriteCity extends Component {
             <br />
               <button type="submit" className="btn btn-secondary">Submit</button>
           </form>
-          <CityDropDown userEmail={this.state.email} />
+          <CityDropDown username={this.state.username} />
+
           { userCities && userCities.map((value, key) => {
             return (
               <div key={key}>
-                <p>{value.city}</p>
+                <p>{value.name}</p>
               </div>
             )
           })}

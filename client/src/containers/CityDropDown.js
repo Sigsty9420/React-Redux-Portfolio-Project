@@ -25,7 +25,7 @@ class CityDropDown extends Component {
   }
 
   handleSelect(selection) {
-    this.props.saveUserCitySelection(selection.label, this.props.userEmail);
+    this.props.saveUserCitySelection(selection.label, this.props.username);
     //this.props.fetchDetails(selection.value);
   }
 
