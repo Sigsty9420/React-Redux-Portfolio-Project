@@ -9,7 +9,9 @@ class App extends Component {
     return (
         <div>
           <h1 className="text-center">Nomad City Teleporter</h1>
-          <DropDown />
+          {this.props.location.pathname !== '/favourite_city' &&
+            <DropDown />
+          }
           {this.props.children}
         </div>
       );

@@ -30,6 +30,7 @@ class MainCity extends Component {
       <div className="row">
         <h2 className="text-center">{this.props.city.name}</h2>
         <div className="col-md-offset-4 col-md-4">
+          
           <General
           name={this.props.city.name}
           population={this.props.city.urban_area_population_millions}
