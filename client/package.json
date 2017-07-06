@@ -4,6 +4,7 @@
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
+    "bootstrap-progress-bar": "^1.1.3",
     "history": "^4.6.3",
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.0",

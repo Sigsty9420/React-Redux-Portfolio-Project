@@ -3,7 +3,7 @@ import React from 'react';
 export default (props) => {
   return (
     <div>
-      <h3 className="text-center">Business</h3>
+      <h3 className="text-center">Business &nbsp;<span className="glyphicon glyphicon-briefcase" aria-hidden="true" /></h3>
 
       <h4><u>Busines Freedom</u></h4>
 
