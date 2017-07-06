@@ -1,13 +1,7 @@
 class UsersController < ApplicationController
 
-  def new
-    @user = User.create(email: params[:email])
-    render json: @user
-  end
-
-
-  def show
-    @user = User.find(params[:id])
-    render json: @user
+  def find_or_create
+    @user = User.find_or_creat_by(email: params[:email])
+    render :json => @user, :include => [:favourite_cities]
   end
 end

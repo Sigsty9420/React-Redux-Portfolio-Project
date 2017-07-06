@@ -1,5 +1,4 @@
 import React from 'react';
-import ProgressBar from "bootstrap-progress-bar";
 
 export default (props) => {
   return (
@@ -11,7 +10,7 @@ export default (props) => {
       <p>Large apartment monthly rental - ${props.largeRent} USD</p>
       <p>Medium apartment monthly rental - ${props.mediumRent} USD</p>
       <p>Small apartment monthly rental - ${props.smallRent} USD</p>
-      <p>Rent index Teleport Score - {props.rentScore}<ProgressBar width={props.rentScore * 510} message={props.rentScore * 100}/></p>
+      <p>Rent index Teleport Score - {props.rentScore}</p>
 
       <h4><u>Food costs</u></h4>
 
